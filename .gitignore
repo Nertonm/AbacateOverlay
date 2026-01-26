@@ -1,0 +1,95 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Rust
+/target/
+**/target/
+*.rlib
+*.d
+
+# Cargo
+Cargo.lock
+
+# Tauri native build artifacts
+/abacate-overlay/src-tauri/target/
+/abacate-overlay/src-tauri/dist/
+/abacate-overlay/src-tauri/bundle/
+
+# Python
+**/__pycache__/
+**/*.py[cod]
+**/*.pyo
+**/*.pyd
+venv/
+.venv/
+python-core/venv/
+python-core/.venv/
+.env
+.env.*
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary & tooling
+coverage/
+.cache/
+*.sqlite3
+*.db
+
+# Build artifacts
+*.o
+*.so
+*.dll
+*.exe
+
+# Tauri specific
+# Native build outputs and bundles
+/src-tauri/target/
+/src-tauri/dist/
+/src-tauri/bundle/
+
+# macOS
+*.app
+*.dmg
+*.pkg
+
+# Linux
+*.AppImage
+*.deb
+*.rpm
+
+# Windows
+*.msi
+*.exe
+
+# generated icons and native resources
+/src-tauri/icons/
+/src-tauri/build/
+
+# Tauri config/generated folders
+.tauri/
+

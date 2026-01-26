@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <h1>Abacate Overlay Dev</h1>
+    
+    <div style="padding: 20px;">
+      <button id="btn-capture" style="font-size: 20px; padding: 10px;">
+        📸 Capturar e Enviar para IA
+      </button>
+      <p id="status">Aguardando...</p>
+    </div>
+
+    <script type="module">
+      const { invoke } = window.__TAURI__.core;
+      
+      const btn = document.getElementById("btn-capture");
+      const status = document.getElementById("status");
+
+      btn.addEventListener("click", async () => {
+        status.innerText = "Capturando...";
+        try {
+          // Chama a função Rust
+          const response = await invoke("capture_and_stream");
+          status.innerText = "Status: " + response;
+        } catch (error) {
+          status.innerText = "Erro: " + error;
+          console.error(error);
+        }
+      });
+    </script>
+  </body>
+</html>
